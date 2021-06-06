@@ -1,0 +1,129 @@
+2021-03-11 16:42:11,235 INFO start sanic service
+2021-03-11 16:42:11,711 INFO start sanic service
+2021-03-12 15:30:52,658 INFO start sanic service
+2021-03-12 15:30:53,909 INFO start sanic service
+2021-03-12 15:31:08,108 INFO start sanic service
+2021-03-12 15:31:08,553 INFO start sanic service
+2021-03-12 15:54:41,963 INFO start sanic service
+2021-03-12 15:57:28,689 INFO start sanic service
+2021-03-12 15:58:20,083 INFO start sanic service
+2021-03-12 15:59:07,280 INFO start sanic service
+2021-03-12 15:59:42,931 INFO start sanic service
+2021-03-12 16:00:43,736 INFO start sanic service
+2021-03-12 16:02:03,401 INFO start sanic service
+2021-03-12 16:02:31,880 INFO start sanic service
+2021-03-12 16:05:11,212 INFO start sanic service
+2021-03-12 16:13:29,116 INFO start sanic service
+2021-03-12 16:15:49,538 INFO start sanic service
+2021-03-12 16:38:47,077 INFO start sanic service
+2021-03-16 10:03:31,208 INFO start sanic service
+2021-03-16 10:03:31,661 INFO start sanic service
+2021-03-16 10:03:51,781 INFO {'field_1': 'field_1', 'field_2': 'field_2'}
+2021-03-16 10:12:12,617 INFO start sanic service
+2021-03-16 10:23:42,364 INFO start sanic service
+2021-03-16 10:24:54,746 INFO start sanic service
+2021-03-16 11:07:49,778 INFO start sanic service
+2021-03-16 11:07:50,259 INFO start sanic service
+2021-03-16 11:07:56,128 INFO {'field_1': 'field_1', 'field_2': 'field_2'}
+2021-03-16 11:08:42,923 INFO start sanic service
+2021-03-16 11:08:47,631 INFO {'field_1': 'field_1', 'field_2': 'field_2'}
+2021-03-16 11:08:47,631 ERROR Postgres driver not installed!
+Traceback (most recent call last):
+  File "D:\Work\SourceCode\owner-source\sanic-service\src\model\orm_model.py", line 24, in query_data_model
+    query_result = pg_db.execute_sql("select * from mydb.fake_table")
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 3141, in execute_sql
+    cursor = self.cursor(commit)
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 3125, in cursor
+    self.connect()
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 3079, in connect
+    self._state.set_connection(self._connect())
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 3774, in _connect
+    raise ImproperlyConfigured('Postgres driver not installed!')
+peewee.ImproperlyConfigured: Postgres driver not installed!
+2021-03-16 11:08:47,633 INFO {}
+2021-03-16 11:18:03,263 INFO start sanic service
+2021-03-16 11:18:03,791 INFO start sanic service
+2021-03-16 11:18:08,012 INFO {'field_1': 'field_1', 'field_2': 'field_2'}
+2021-03-16 11:18:12,021 ERROR could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+Traceback (most recent call last):
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 3079, in connect
+    self._state.set_connection(self._connect())
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 3775, in _connect
+    conn = psycopg2.connect(database=self.database, **self.connect_params)
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\psycopg2\__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 3141, in execute_sql
+    cursor = self.cursor(commit)
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 3125, in cursor
+    self.connect()
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 3082, in connect
+    self._initialize_connection(self._state.conn)
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 2916, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 190, in reraise
+    raise value.with_traceback(tb)
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 3079, in connect
+    self._state.set_connection(self._connect())
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 3775, in _connect
+    conn = psycopg2.connect(database=self.database, **self.connect_params)
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\psycopg2\__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+peewee.OperationalError: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Work\SourceCode\owner-source\sanic-service\src\model\orm_model.py", line 30, in query_data_model
+    query_result = pg_db.execute_sql("select * from mydb.fake_table")
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 3150, in execute_sql
+    self.commit()
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 2916, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 190, in reraise
+    raise value.with_traceback(tb)
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 3141, in execute_sql
+    cursor = self.cursor(commit)
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 3125, in cursor
+    self.connect()
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 3082, in connect
+    self._initialize_connection(self._state.conn)
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 2916, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 190, in reraise
+    raise value.with_traceback(tb)
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 3079, in connect
+    self._state.set_connection(self._connect())
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\peewee.py", line 3775, in _connect
+    conn = psycopg2.connect(database=self.database, **self.connect_params)
+  File "D:\Work\SourceCode\owner-source\sanic-service\devenv\lib\site-packages\psycopg2\__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+peewee.OperationalError: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+2021-03-16 11:18:12,029 INFO {}
